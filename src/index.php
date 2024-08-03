@@ -8,8 +8,8 @@ use ImgOnthefly\ParseUrl;
 use Arrilot\DotEnv\DotEnv;
 
 $url = isset($_GET['u']) ? $_GET['u'] : null;
-$width = isset($_GET['w']) ? $_GET['w'] : 1200; // best SEO 19:9
-$height = isset($_GET['h']) ? $_GET['h'] : 675; // best SEO 19:9
+$width = isset($_GET['w']) ? min($_GET['w'], 3000) : 1200; // best SEO 19:9
+$height = isset($_GET['h']) ? min($_GET['h'], 3000) : 675; // best SEO 19:9
 $key = isset($_GET['key']) ? $_GET['key'] : 'DEFAULT';
 
 DotEnv::load(dirname(__FILE__) . './../.env.php');
