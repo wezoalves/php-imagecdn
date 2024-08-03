@@ -5,4 +5,5 @@ logs/
 !logs/.keep
 !src/image/.keep
 .env*
+env.php
 composer.lock
